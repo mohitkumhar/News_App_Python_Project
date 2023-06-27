@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+</head>
+<body>
+    <p>News of {{ news }}</p>
+    <hr>
+    <h2><center>Total Result Found {{ results }}</center></h2>
+    <hr>
+
+    {% if articles %}
+
+        {% for article  in articles %}
+        
+        <h3>By {{ article.source.name }}</h3>
+        <p>-------------------------------------------------------</p>
+        <h2>The Author of Article: {{ article.author }}</h2>
+        <p>-------------------------------------------------------</p>
+        <h2>Title of Article: {{ article.title }}</h2>
+        <p>-------------------------------------------------------</p>
+        <h4><p>Description of Article: {{ article.description }}</p>
+        <p>-------------------------------------------------------</p>
+        <p>Content of Article: {{ article.content }}</p>
+        <p>-------------------------------------------------------</p>
+        <p>Article Published on: {{ article.publishedAt }}</p></h4>
+        <hr>
+        <hr>
+
+        {% endfor %}
+
+    {% else %}
+
+        <p>Sorry..!! News Not Found</p>
+
+    {% endif %}
+
+    
+
+</body>
+</html>
