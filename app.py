@@ -3,7 +3,7 @@ import requests
 
 app = Flask(__name__)
 
-my_api = 'ENTER_YOUR_API'
+my_api = 'YOUR_API_KEY'
 def get_news(x):
     url = f'https://newsapi.org/v2/everything?q={x}&from=2023-05-27&sortBy=publishedAt&apiKey={my_api}'
     # https://newsapi.org/v2/everything?q={x}&from=2023-05-27&sortBy=publishedAt&apiKey=ec1dc33f73174c69bfcb164a64e8c2ee
